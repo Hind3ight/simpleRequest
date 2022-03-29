@@ -82,8 +82,8 @@ func TestAuthorization(t *testing.T) {
 
 }
 
-func TestXml(t *testing.T) {
-	idcard := "320324196705101880"
+func TestXmlRequest(t *testing.T) {
+	idcard := ""
 	thisDate := time.Now().Format(timeUtil.TimeFormat.NoSpacer_YMD)
 	passStr := fmt.Sprintf("%v%vsparkcn", idcard, thisDate)
 	pass := simpleCrypto.Md5Enscrypto(passStr)
